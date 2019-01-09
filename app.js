@@ -33,7 +33,7 @@ var createCategories = async () => {
         return response;
       }
       catch(e) {
-        console.log(e);        
+        return e.response.data;    
       }
     }
   }
@@ -79,7 +79,7 @@ var createAuthors = async () => {
         return response;
       }
       catch(e) {
-        console.log(e);        
+        return e.response.data;    
       }
     }
   }
@@ -112,20 +112,34 @@ var createBooks = async () => {
         var categoryName = sheet1[i][7];
         var category = await getCategoryByName(categoryName);
         var author = await getAuthorByName(authorName);
-        
+        var publishYear = undefined;
+        var pagesNumber = undefined;
+
+        if(sheet1[i][4]!==null)
+        publishYear = sheet1[i][4];
+
+        if(sheet1[i][5]!==null)
+        pagesNumber = sheet1[i][5];
+
         var response = await axios.post('http://localhost:3000/books/create', {
           title: currbookTitle,
           author: author,
           description: sheet1[i][2],
           isbn: sheet1[i][3],
-          publishYear: parseInt(sheet1[i][4]),
-          pagesNumber: parseInt(sheet1[i][5]),
+          publishYear: publishYear,
+          pagesNumber: pagesNumber,
           image: sheet1[i][6],
           category: category
         });
+        console.log(response);
+        
+        
+        return {res: response.data, record: i};
+        
       }
       catch(e) {
-        console.log(e);        
+
+        return {res: e.response.data, record: i};       
       }
     }
   }
