@@ -30,3 +30,19 @@
 {"level":"error","message":{},"time":"2019-01-09T14:21:45.021Z"}
 {"level":"error","message":{},"time":"2019-01-09T14:22:27.065Z"}
 {"level":"error","message":{},"time":"2019-01-09T14:23:40.203Z"}
+{"level":"error","message":{},"time":"2019-01-13T10:42:47.662Z"}
+{"level":"error","message":{},"time":"2019-01-13T10:59:01.563Z"}
+{"level":"error","message":{},"time":"2019-01-13T11:03:22.371Z"}
+{"level":"error","message":{},"time":"2019-01-13T11:03:58.943Z"}
+{"level":"error","message":{},"time":"2019-01-13T11:04:44.305Z"}
+{"level":"error","message":"can not have 2 books with the same name at record undefined","time":"2019-01-13T11:15:14.629Z"}
+{"level":"error","message":"\"title\" is required at record undefined","time":"2019-01-13T11:15:44.093Z"}
+{"level":"error","message":"\"title\" is required at record undefined","time":"2019-01-13T11:17:48.182Z"}
+{"level":"error","message":"\"title\" is required at record undefined","time":"2019-01-13T11:21:18.555Z"}
+{"level":"error","message":"\"title\" is required at record undefined","time":"2019-01-13T11:21:51.488Z"}
+{"level":"error","message":"\"title\" is required at record undefined","time":"2019-01-13T11:22:05.216Z"}
+{"level":"error","message":"invalid author at record undefined","time":"2019-01-13T11:26:35.077Z"}
+{"level":"error","message":"invalid author at record 102","time":"2019-01-13T11:27:07.034Z"}
+{"level":"error","message":"invalid author at record 103","time":"2019-01-13T11:28:40.705Z"}
+{"level":"error","message":"invalid author at record 103, data: catch","time":"2019-01-13T11:30:02.092Z"}
+{"level":"error","message":"invalid category at record 103, data: catch,wrtrreg,tetre,tretretre","time":"2019-01-13T11:30:49.124Z"}

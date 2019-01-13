@@ -100,7 +100,7 @@ var getBookByTitle = async (title) => {
 var createBooks = async () => {
   var sheet1 = workSheetsFromFile[0].data;
 
-  for(var i=1; i<sheet1.length; i++) {
+  for(let i=1; i<sheet1.length; i++) {
     currbookTitle = sheet1[i][0];
     // console.log(currbookTitle);
     
@@ -131,18 +131,15 @@ var createBooks = async () => {
           image: sheet1[i][6],
           category: category
         });
-        console.log(response);
-        
-        
-        return {res: response.data, record: i};
         
       }
       catch(e) {
-
-        return {res: e.response.data, record: i};       
+        // console.log(e);      
+        return {resp: e.response.data, record: i+1, data: sheet1[i]};       
       }
     }
   }
+  return {resp: {status : 'success'}}
 }
 
 var getBooksNumber = async() => {

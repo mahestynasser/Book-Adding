@@ -18,7 +18,7 @@ app.get('/', async(req, res) => {
         // console.log(response);
         
         var enteredBooks = currentNumberOfBooks-initialNumberOfBooks;
-        if(response.res.status==='success') {
+        if(response.resp.status==='success') {
             res.send({
                 data : enteredBooks,
                 status : 'success'
@@ -27,11 +27,11 @@ app.get('/', async(req, res) => {
         else {
             logger.log({
                 level: 'error',
-                message: `${response.res.data} at record ${response.res.record}`,
+                message: `${response.resp.data} at record ${response.record}, data: ${response.data}`,
                 time: new Date()
               });
              res.status(400).send({
-                data : `${response.res.data} at record ${response.res.record}`,
+                data : `${response.resp.data} at record ${response.record}, data: ${response.data}`,
                 status : 'fail'
             }); 
              return;
